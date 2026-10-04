@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Churn Prediction Result
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <div class="logo">
+        ChurnAI
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">
+            Prediction
+        </a>
+
+        <a href="/analysis">
+            Analysis
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="result-container">
+
+
+    <div class="result-card">
+
+
+        <h1>
+            Prediction Result
+        </h1>
+
+
+        {% if prediction == "High Risk of Churn" %}
+
+            <div class="result danger">
+
+                <h2>
+                    ⚠ High Risk of Churn
+                </h2>
+
+                <p>
+                    This customer is likely
+                    to leave the company.
+                </p>
+
+            </div>
+
+        {% elif prediction == "Low Risk of Churn" %}
+
+            <div class="result success">
+
+                <h2>
+                    ✓ Low Risk of Churn
+                </h2>
+
+                <p>
+                    This customer is unlikely
+                    to leave the company.
+                </p>
+
+            </div>
+
+        {% else %}
+
+            <div class="result danger">
+
+                <h2>
+                    Prediction Error
+                </h2>
+
+            </div>
+
+        {% endif %}
+
+
+        <div class="probability">
+
+            <h3>
+                Churn Probability
+            </h3>
+
+            <div class="percentage">
+
+                {{ probability }}%
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    style="width: {{ probability }}%"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="recommendation">
+
+            <h3>
+                Recommendation
+            </h3>
+
+            <p>
+                {{ recommendation }}
+            </p>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <a
+                href="/"
+                class="btn"
+            >
+                New Prediction
+            </a>
+
+            <a
+                href="/analysis"
+                class="btn secondary"
+            >
+                View Analysis
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

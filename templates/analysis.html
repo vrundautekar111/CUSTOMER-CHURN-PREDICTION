@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Customer Churn Analysis
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <div class="logo">
+        ChurnAI
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">
+            Prediction
+        </a>
+
+        <a href="/analysis">
+            Analysis
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="analysis-container">
+
+
+    <h1>
+        Customer Churn Analysis
+    </h1>
+
+    <p class="analysis-description">
+
+        Analyze customer behavior and
+        identify important churn patterns.
+
+    </p>
+
+
+    <div class="stats">
+
+
+        <div class="stat-card">
+
+            <h3>
+                Total Customers
+            </h3>
+
+            <p>
+                {{ total_customers }}
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>
+                Churned Customers
+            </h3>
+
+            <p>
+                {{ churned_customers }}
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>
+                Retained Customers
+            </h3>
+
+            <p>
+                {{ retained_customers }}
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>
+                Churn Rate
+            </h3>
+
+            <p>
+                {{ churn_rate }}%
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="graphs">
+
+
+        <div class="graph-card">
+
+            <h2>
+                Churn Distribution
+            </h2>
+
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='graphs/churn_distribution.png'
+                ) }}"
+            >
+
+        </div>
+
+
+        <div class="graph-card">
+
+            <h2>
+                Churn by Contract
+            </h2>
+
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='graphs/contract_churn.png'
+                ) }}"
+            >
+
+        </div>
+
+
+        <div class="graph-card">
+
+            <h2>
+                Tenure vs Churn
+            </h2>
+
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='graphs/tenure_churn.png'
+                ) }}"
+            >
+
+        </div>
+
+
+        <div class="graph-card">
+
+            <h2>
+                Monthly Charges vs Churn
+            </h2>
+
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='graphs/monthly_charges.png'
+                ) }}"
+            >
+
+        </div>
+
+
+        <div class="graph-card">
+
+            <h2>
+                Internet Service vs Churn
+            </h2>
+
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='graphs/internet_churn.png'
+                ) }}"
+            >
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
