@@ -9,7 +9,7 @@ Matplotlib / Seaborn — analysis and graphs
 Flask — web backend
 HTML/CSS/JavaScript — web interface
 Joblib — save trained model
-Main features
+Main features 
 Upload/use customer dataset
 Data cleaning
 Exploratory Data Analysis
