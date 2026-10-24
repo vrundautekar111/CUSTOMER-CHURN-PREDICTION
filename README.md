@@ -1,5 +1,5 @@
 # CUSTOMER-CHURN-PREDICTION
-Goal: Predict whether a customer is likely to leave a company (Churn = Yes/No) based on customer information, usage, contract, tenure, billing, and other features.
+Goal: Predict whether a customer is likely to leave a company (Churn = Yes/No) based on customer information, usage, contract, tenure, billing, and other features.  
 
 Technology stack
 Python 
