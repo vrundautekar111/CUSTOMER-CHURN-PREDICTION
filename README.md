@@ -6,7 +6,7 @@ Technology stack
 Python 
 Pandas / NumPy — data processing
 Scikit-learn — machine learning
-Matplotlib / Seaborn — analysis and graphs
+Matplotlib / Seaborn — analysis and graphs 
 Flask — web backend
 HTML/CSS/JavaScript — web interface
 Joblib — save trained model
